@@ -1,0 +1,25 @@
+<MainWidget>:
+    output_label: out1
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 81, 81, 88, 0.66
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        width: 800
+        height: 600
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint: (1, .34)
+            orientation: 'horizontal'
+            Button:
+                text: 'lewo'
+                on_press: root.rotate(-root.increment)
+            Button:
+                text: 'prawo'
+                on_press: root.rotate(root.increment)
+        Label:
+            size_hint: (1, .55)
+            id: out1
+            text: 'Kąt: 0'
